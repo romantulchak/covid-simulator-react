@@ -1,0 +1,28 @@
+header{
+  .links__list{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    background: aliceblue;
+
+    .logo{
+      width: 35px;
+      height: 35px;
+    }
+
+    .links{
+      display: flex;
+      align-items: center;
+
+      li{
+        &:not(:last-child){
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}
+
+.active{
+  color: red;
+}

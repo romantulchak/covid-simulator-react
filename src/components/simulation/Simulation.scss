@@ -1,0 +1,30 @@
+.form__chart {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+
+  form {
+    text-align: center;
+
+    .simulate__field {
+
+      &:not(:nth-child(8)) {
+        margin: 1em 0;
+      }
+    }
+
+    .simulate__btn {
+      text-align: right;
+
+      button {
+        color: #ff423d;
+        border-color: #ff423d99;
+        margin: 1em 15px 0 0;
+      }
+    }
+  }
+}
+
+.text__field_bg_color {
+  color: #ff423d;
+  background: azure;
+}
