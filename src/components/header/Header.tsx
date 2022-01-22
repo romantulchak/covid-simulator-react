@@ -1,5 +1,5 @@
-import {Link, NavLink} from "react-router-dom";
-import logo from '../../../assets/image/logo.svg'
+import {NavLink} from "react-router-dom";
+import logo from '../../assets/image/logo.svg'
 import "./Header.scss"
 
 const setActive = ({isActive}: {isActive: boolean}) => (isActive ? "active" : "");

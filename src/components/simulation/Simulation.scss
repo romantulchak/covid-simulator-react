@@ -5,6 +5,17 @@
   form {
     text-align: center;
 
+    .error__message {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+
+      h5{
+        color: #ff423d;
+        max-width: 150px;
+      }
+    }
+
     .simulate__field {
 
       &:not(:nth-child(8)) {
