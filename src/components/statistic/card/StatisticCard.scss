@@ -1,0 +1,48 @@
+.card{
+  background-color: rgb(76 158 231 / 12%);
+  transform-origin: 0 55%;
+  margin-bottom: 50px;
+  margin-top: 25px;
+  border: 1px solid rgb(76 158 231 / 30%);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  height: 60px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  padding: 5px;
+  align-items: center;
+  cursor: pointer;
+  transition: .3s ease-in;
+
+  &:hover{
+    background-color: rgb(76 158 231 / 40%);
+    border: 1px solid rgb(76 158 231 / 50%);
+  }
+
+  .attribute{
+    font-family: "Open Sans", serif;
+    text-align: center;
+
+    .title{
+      font-size: 14px;
+    }
+
+    .mortality__rate{
+      color: red;
+    }
+
+    .days__to_recovery{
+      color: #13ad2d;
+    }
+
+    .population{
+      color: blueviolet;
+    }
+
+    span{
+      display: block;
+      margin-top: 5px;
+    }
+  }
+}

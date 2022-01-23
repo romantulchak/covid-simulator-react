@@ -1,0 +1,32 @@
+form {
+  text-align: center;
+  border-right: 1px solid rgb(0 0 0 / 20%);
+
+  .error__message {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+
+    h5 {
+      color: #ff423d;
+      max-width: 150px;
+    }
+  }
+
+  .simulate__field {
+
+    &:not(:nth-child(8)) {
+      margin: 1em 0;
+    }
+  }
+
+  .simulate__btn {
+    text-align: right;
+
+    button {
+      color: #ff423d;
+      border-color: #ff423d99;
+      margin: 1em 15px 0 0;
+    }
+  }
+}

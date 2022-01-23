@@ -1,6 +1,6 @@
 import {SimulationDetailsDTO} from "./SimulationDetailsDTO";
 
-export interface SimulationDTO {
+export interface SimulationDTO<> {
     id?: number;
     simulationName: string;
     population: number;

@@ -10,7 +10,7 @@ export class SimulationService{
         return axios.post<SimulationDetailsDTO[]>(`${API_URL}/start`, simulation);
     }
 
-    public getPreviousResults(page: number = 1): Promise<AxiosResponse<SimulationDTO>>{
-        return axios.get<SimulationDTO>(`${API_URL}/results/${page}`);
+    public getPreviousResults(page: number = 1): Promise<AxiosResponse<SimulationDTO[]>>{
+        return axios.get<SimulationDTO[]>(`${API_URL}/results/${page}`);
     }
 }
