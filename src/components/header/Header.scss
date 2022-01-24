@@ -1,21 +1,34 @@
-header{
-  .links__list{
+header {
+  .links__list {
     display: flex;
     justify-content: space-around;
-    padding: 5px;
+    padding: 15px;
     background: aliceblue;
 
-    .logo{
+    .logo {
       width: 35px;
       height: 35px;
     }
 
-    .links{
+    .links {
       display: flex;
       align-items: center;
 
-      li{
-        &:not(:last-child){
+      .covid__link {
+        padding: 10px;
+        border: 1px solid #ff423d;
+        border-radius: 4px;
+        transition: .3s ease-in;
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: 1px 1px 3px rgba(255, 66, 61, 0.55);
+
+        }
+      }
+
+      li {
+        &:not(:last-child) {
           margin-right: 15px;
         }
       }
@@ -23,6 +36,6 @@ header{
   }
 }
 
-.active{
+.active {
   color: red;
 }

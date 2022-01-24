@@ -1,7 +1,6 @@
 .card{
   background-color: rgb(76 158 231 / 12%);
   transform-origin: 0 55%;
-  margin-bottom: 50px;
   margin-top: 25px;
   border: 1px solid rgb(76 158 231 / 30%);
   border-radius: 8px;
@@ -15,20 +14,25 @@
   cursor: pointer;
   transition: .3s ease-in;
 
-  &:hover{
+  &:not(:nth-child(7)) {
+    margin-bottom: 50px;
+  }
+
+
+  &:hover {
     background-color: rgb(76 158 231 / 40%);
     border: 1px solid rgb(76 158 231 / 50%);
   }
 
-  .attribute{
+  .attribute {
     font-family: "Open Sans", serif;
     text-align: center;
 
-    .title{
+    .title {
       font-size: 14px;
     }
 
-    .mortality__rate{
+    .mortality__rate {
       color: red;
     }
 
@@ -36,13 +40,19 @@
       color: #13ad2d;
     }
 
-    .population{
+    .population {
       color: blueviolet;
     }
 
-    span{
+    span {
       display: block;
       margin-top: 5px;
     }
   }
+}
+
+.pagination {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
 }

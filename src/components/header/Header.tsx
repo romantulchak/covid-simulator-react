@@ -14,7 +14,8 @@ export const Header = () => {
                     <li><NavLink className={setActive} to={"/"}>Home</NavLink></li>
                     <li><NavLink className={setActive} to={"/simulation"}>Simulation</NavLink></li>
                     <li><NavLink className={setActive} to={"/statistic"}>Statistic</NavLink></li>
-                    <li><NavLink className={setActive} to={"/about-us"}>About us</NavLink></li>
+                    <li className="covid__link"><NavLink className={setActive} to={"/what-is-covid"}>What is
+                        COVID-19?</NavLink></li>
                 </div>
             </ul>
         </header>

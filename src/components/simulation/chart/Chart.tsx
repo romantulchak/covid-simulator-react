@@ -1,4 +1,6 @@
 import {
+    ArcElement,
+    BarElement,
     CategoryScale,
     Chart as ChartJS,
     Legend,
@@ -6,14 +8,11 @@ import {
     LineElement,
     PointElement,
     Title,
-    Tooltip,
-    BarElement,
-    ArcElement
+    Tooltip
 } from "chart.js";
 import {LineChart} from "./line-chart/LineChart";
 import {BarChart} from "./bar-chart/BarChart";
 import {SimulationDetailsDTO} from "../../../dto/SimulationDetailsDTO";
-import {PieChart} from "./pie-chart/PieChart";
 
 ChartJS.register(
     CategoryScale,
@@ -27,7 +26,7 @@ ChartJS.register(
     ArcElement
 );
 
-export const Chart = (props: { type: string, data: SimulationDetailsDTO[] }) => {
+export const Chart = (props: { type: string, data?: SimulationDetailsDTO[] }) => {
     const type: string = props.type;
     const simulationDetails = props.data;
     const labels: number[] = [];
@@ -44,7 +43,7 @@ export const Chart = (props: { type: string, data: SimulationDetailsDTO[] }) => 
         },
     };
 
-    simulationDetails.forEach(simulationDetail => {
+    simulationDetails?.forEach(simulationDetail => {
         labels.push(simulationDetail.day)
         numberOfInfected.push(simulationDetail.numberOfInfected);
         numberOfHealthyWithoutImmunity.push(simulationDetail.numberOfHealthyWithoutImmunity);
@@ -91,8 +90,6 @@ export const Chart = (props: { type: string, data: SimulationDetailsDTO[] }) => 
                 return <LineChart data={data} options={options}/>
             case 'BAR':
                 return <BarChart data={data} options={options} />
-            case 'PIE':
-                return <PieChart data={data} options={options} />
         }
     }
 
