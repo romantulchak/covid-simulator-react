@@ -17,8 +17,12 @@ export class SimulationChart extends React.Component<any, any> {
             <div className="result__block">
                 <h3 className="result__title">Result</h3>
                 <div className="pie__chart_block">
+                    <h3 className="chart__name">Pie chart</h3>
                     <PieChart simulationDetails={this.simulationDetails}/>
+                    <h3 className="chart__name">Bar chart</h3>
+                    <Chart type={"BAR"} data={this.simulationDetails}/>
                 </div>
+
             </div>
         </div>
     }
